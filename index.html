@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacidade no Meus Pilas</title>
+<meta name="description" content="Política de privacidade do aplicativo Meus Pilas, de controle financeiro pessoal para Android.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: uma coluna de leitura (~66 caracteres), resumo em tabela no topo, seções numeradas como num documento legal. */
+:root {
+  --bg: #f4f6f2;
+  --surface: #ffffff;
+  --fg: #1c2420;
+  --muted: #56625b;
+  --line: #d8dfd8;
+  --accent: #1f6b4f;
+  --accent-soft: #e3efe8;
+  --font-display: "Fraunces", "Noto Serif", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", Roboto, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1512; --surface: #161e1a; --fg: #e5ebe7; --muted: #9eaba3; --line: #2a3530; --accent: #6cc8a0; --accent-soft: #1b2b24;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1512; --surface: #161e1a; --fg: #e5ebe7; --muted: #9eaba3; --line: #2a3530; --accent: #6cc8a0; --accent-soft: #1b2b24;
+  color-scheme: dark;
+}
+body {
+  margin: 0;
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+}
+main { max-width: 44rem; margin: 0 auto; display: grid; gap: 28px; }
+header { display: grid; gap: 6px; }
+.app { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 6vw, 42px); line-height: 1.12; margin: 0; text-wrap: balance; }
+.vigencia { color: var(--muted); font-size: 15px; margin: 4px 0 0; }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 1.25; margin: 0 0 8px; text-wrap: balance; display: flex; gap: 10px; align-items: baseline; }
+h2 .n { font-family: var(--font-body); font-size: 14px; font-weight: 700; color: var(--accent); min-width: 1.6em; font-variant-numeric: tabular-nums; }
+section { display: grid; gap: 4px; }
+p, li { margin: 0; }
+section p + p, section ul + p, section p + ul { margin-top: 8px; }
+ul { padding-left: 1.2em; margin: 0; display: grid; gap: 6px; }
+strong { font-weight: 700; }
+a { color: var(--accent); text-underline-offset: 3px; }
+code { font-size: .92em; background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.resumo { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 8px; }
+.resumo h2 { margin-bottom: 10px; }
+.tabela { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px 10px 0; border-top: 1px solid var(--line); }
+th { font-weight: 600; width: 38%; padding-right: 14px; }
+td { color: var(--muted); }
+.contato { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 6px; }
+.email { font-weight: 700; font-size: 18px; user-select: all; overflow-wrap: anywhere; }
+button { font: inherit; font-size: 14px; font-weight: 600; color: var(--accent); background: var(--accent-soft); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+footer { border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+
+<main>
+  <header>
+    <span class="app">Meus Pilas · Android</span>
+    <h1>Política de Privacidade</h1>
+    <p class="vigencia">Em vigor desde 26 de outubro de 2026 · aplicativo <code>br.com.enigmaautomacao.meuspilas</code></p>
+  </header>
+
+  <p>O Meus Pilas é um aplicativo de controle financeiro pessoal. Ele foi feito para funcionar com os seus dados guardados no seu próprio celular. Esta política explica quais informações o app usa, onde elas ficam e quando o app acessa a internet.</p>
+
+  <section class="resumo" aria-labelledby="t-resumo">
+    <h2 id="t-resumo">Em resumo</h2>
+    <div class="tabela">
+      <table>
+        <tbody>
+          <tr><th scope="row">Seus lançamentos, contas e investimentos</th><td>Ficam guardados só no seu celular. O desenvolvedor não recebe esses dados.</td></tr>
+          <tr><th scope="row">Servidor próprio</th><td>Não existe. O Meus Pilas não tem servidor nem cadastro de usuários.</td></tr>
+          <tr><th scope="row">Câmera</th><td>Usada só para ler o QR Code da nota fiscal, quando você pede.</td></tr>
+          <tr><th scope="row">Internet</th><td>Usada para consultar a nota fiscal no portal oficial da SEFAZ e para verificar atualizações na Google Play.</td></tr>
+          <tr><th scope="row">Anúncios e rastreamento</th><td>Não há anúncios, ferramentas de análise ou rastreamento.</td></tr>
+          <tr><th scope="row">Venda ou compartilhamento de dados</th><td>Nenhum dado é vendido ou compartilhado pelo desenvolvedor.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="t1">
+    <h2 id="t1"><span class="n">1</span>Informações que você registra</h2>
+    <p>Você pode registrar no app entradas e saídas (descrição, valor, data, categoria, forma de pagamento e observação), despesas e receitas fixas, compras parceladas, contas correntes com limite e taxas do cheque especial, transferências entre contas e investimentos.</p>
+    <p>Essas informações são gravadas num banco de dados dentro do próprio aplicativo, no seu celular. Elas não são enviadas ao desenvolvedor nem a terceiros.</p>
+  </section>
+
+  <section aria-labelledby="t2">
+    <h2 id="t2"><span class="n">2</span>Câmera e fotos</h2>
+    <p>O app pede permissão de câmera (<code>android.permission.CAMERA</code>) para ler o QR Code da nota fiscal de consumidor eletrônica (NFC-e). A câmera só é ligada quando você toca em ler o QR Code. A imagem é analisada no próprio celular e não é guardada nem enviada.</p>
+    <p>Você também pode escolher uma foto da nota ou um arquivo XML da nota. Esses arquivos são lidos no celular para preencher os campos e não são enviados a ninguém.</p>
+  </section>
+
+  <section aria-labelledby="t3">
+    <h2 id="t3"><span class="n">3</span>Consulta da nota fiscal na SEFAZ</h2>
+    <p>Quando você lê o QR Code de uma NFC-e, o próprio celular acessa o endereço oficial que está no QR Code, no portal da Secretaria da Fazenda do estado que emitiu a nota (por exemplo, RS, SP, BA e MG). Esse endereço contém a chave de acesso da nota. O portal devolve os dados da nota, e o app mostra o nome do estabelecimento, a data, o valor e a forma de pagamento para você conferir antes de salvar.</p>
+    <p>Essa comunicação acontece diretamente entre o seu celular e o portal do governo estadual, sem passar por nenhum servidor do Meus Pilas. Alguns portais, como o de Minas Gerais, pedem a verificação “não sou um robô” (reCAPTCHA, do Google). Nesse caso a página oficial abre dentro do app e você faz a verificação. O uso desses portais segue as regras de privacidade de cada SEFAZ e, no caso do reCAPTCHA, a <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
+  </section>
+
+  <section aria-labelledby="t4">
+    <h2 id="t4"><span class="n">4</span>Backup dos seus dados</h2>
+    <ul>
+      <li><strong>Backup automático:</strong> o app guarda uma cópia compactada dos seus dados no armazenamento interno do aplicativo. Se o backup do Google estiver ligado no seu Android, o próprio sistema envia essa cópia para o backup da sua conta Google, criptografado, e a devolve se você instalar o Meus Pilas num aparelho novo. Esse serviço é do Google, e o desenvolvedor não tem acesso a ele. Você pode desligá-lo nas configurações do Android.</li>
+      <li><strong>Backup manual:</strong> quando você usa “Exportar backup”, o app gera um arquivo com seus dados e você escolhe onde guardar ou com quem compartilhar. Guarde esse arquivo em local seguro.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="t5">
+    <h2 id="t5"><span class="n">5</span>Atualizações pela Google Play</h2>
+    <p>O app usa o recurso de atualizações da Google Play para avisar quando existe uma versão nova. Essa verificação é feita pelos serviços da Google Play no seu celular, conforme a <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
+  </section>
+
+  <section aria-labelledby="t6">
+    <h2 id="t6"><span class="n">6</span>Preferências</h2>
+    <p>Escolhas de uso, como o tema de cores, ficam guardadas apenas no seu celular.</p>
+  </section>
+
+  <section aria-labelledby="t7">
+    <h2 id="t7"><span class="n">7</span>Como apagar seus dados</h2>
+    <p>Você pode excluir lançamentos e cadastros dentro do app a qualquer momento. Para apagar tudo, use a opção do Android “Limpar dados” do Meus Pilas ou desinstale o aplicativo. A cópia de backup na sua conta Google pode ser removida nas configurações de backup da sua conta Google. Como o desenvolvedor não recebe seus dados, não existe cópia deles com o desenvolvedor para apagar.</p>
+  </section>
+
+  <section aria-labelledby="t8">
+    <h2 id="t8"><span class="n">8</span>Segurança</h2>
+    <p>As conexões com os portais da SEFAZ usam apenas endereços seguros (HTTPS), e o app não aceita certificados de segurança inválidos. Os dados guardados no celular ficam protegidos pelo próprio Android. Recomendamos manter o celular com bloqueio de tela.</p>
+  </section>
+
+  <section aria-labelledby="t9">
+    <h2 id="t9"><span class="n">9</span>Crianças</h2>
+    <p>O Meus Pilas é destinado a adultos e não é direcionado a crianças.</p>
+  </section>
+
+  <section aria-labelledby="t10">
+    <h2 id="t10"><span class="n">10</span>Seus direitos (LGPD)</h2>
+    <p>A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) garante seus direitos sobre dados pessoais. Como o Meus Pilas não coleta nem armazena seus dados fora do seu celular, você mantém o controle direto sobre eles pelo próprio app. Em caso de dúvida ou pedido, entre em contato pelo e-mail abaixo.</p>
+  </section>
+
+  <section aria-labelledby="t11">
+    <h2 id="t11"><span class="n">11</span>Alterações desta política</h2>
+    <p>Se o funcionamento do app mudar de forma que afete a privacidade, esta política será atualizada e a nova data de vigência aparecerá no topo da página.</p>
+  </section>
+
+  <section aria-labelledby="t12">
+    <h2 id="t12"><span class="n">12</span>Contato</h2>
+    <p>Dúvidas sobre esta política ou sobre o aplicativo:</p>
+    <div class="contato">
+      <span class="email" id="email">suporteenigmainfo@gmail.com</span>
+      <button type="button" id="copiar">Copiar e-mail</button>
+    </div>
+  </section>
+
+  <footer>Meus Pilas · controle financeiro pessoal com os dados no seu celular.</footer>
+</main>
+
+<script>
+document.getElementById('copiar').addEventListener('click', async (e) => {
+  const b = e.currentTarget;
+  try { await navigator.clipboard.writeText('suporteenigmainfo@gmail.com'); b.textContent = 'E-mail copiado'; }
+  catch (_) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'E-mail selecionado';
+  }
+  setTimeout(() => { b.textContent = 'Copiar e-mail'; }, 2500);
+});
+</script>
+
+</body>
+</html>
